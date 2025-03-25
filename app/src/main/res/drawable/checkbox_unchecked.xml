@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Cor do CheckBox quando desmarcado (branco) -->
+    <solid android:color="#FFFFFF"/> <!-- Cor branca quando desmarcado -->
+    <corners android:radius="200dp"/> <!-- Borda arredondada -->
+    <stroke android:color="#FF0000" android:width="2dp"/>
+</shape>
