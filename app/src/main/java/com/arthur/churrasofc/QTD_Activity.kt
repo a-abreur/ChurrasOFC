@@ -63,7 +63,7 @@ class QTD_Activity : AppCompatActivity() {
         }
 
         btnConfirmar.setOnClickListener {
-            val intent = Intent(this, ItensActivity::class.java)
+            val intent = Intent(this, FgmtActivity::class.java)
             startActivity(intent)
         }
 

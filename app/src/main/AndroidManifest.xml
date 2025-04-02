@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ChurrasOFC"
         tools:targetApi="31">
         <activity
+            android:name=".FgmtActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InicioActivity"
+            android:exported="false" />
+        <activity
             android:name=".ItensActivity"
             android:exported="false" />
         <activity
