@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
@@ -15,6 +16,8 @@ class FgmtActivity : AppCompatActivity() {
     private lateinit var navTemp: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.statusBarColor = ContextCompat.getColor(this, R.color.white)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fgmt)
 

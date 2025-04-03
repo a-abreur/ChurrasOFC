@@ -24,7 +24,7 @@ class ItensActivity : AppCompatActivity() {
 
         val btnVoltar2 = findViewById<Button>(R.id.btnVoltar2)
         btnVoltar2.setOnClickListener {
-            val intent = Intent(this, QTD_Activity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
         }

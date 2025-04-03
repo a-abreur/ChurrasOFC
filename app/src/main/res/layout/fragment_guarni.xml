@@ -8,7 +8,76 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="330dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+            <CheckBox
+                android:id="@+id/checkBoxFarofa"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/checkbox_selector_farofa"
+                android:button="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBoxArroz"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/checkbox_selector_arroz"
+                android:button="@null"
+                app:layout_constraintEnd_toStartOf="@+id/checkBoxVinagrete"
+                app:layout_constraintStart_toEndOf="@+id/checkBoxFarofa"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBoxVinagrete"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/checkbox_selector_vinagrete"
+                android:button="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBoxBatata"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/checkbox_selector_batata"
+                android:button="@null"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxFarofa" />
+
+            <CheckBox
+                android:id="@+id/checkBoxFeijao"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/checkbox_selector_feijao"
+                android:button="@null"
+                app:layout_constraintEnd_toStartOf="@+id/checkBoxPao"
+                app:layout_constraintStart_toEndOf="@+id/checkBoxBatata"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxArroz" />
+
+            <CheckBox
+                android:id="@+id/checkBoxPao"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/checkbox_selector_pao"
+                android:button="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxVinagrete" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/textView9"
@@ -20,6 +89,39 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" /><![CDATA[
+
+        />
+
+        />
+
+        />
+
+        />
+
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        />
+    ]]>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

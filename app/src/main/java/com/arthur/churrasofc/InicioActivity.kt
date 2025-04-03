@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -32,5 +33,9 @@ class InicioActivity : AppCompatActivity() {
             val intent = Intent(this, QTD_Activity::class.java)
             startActivity(intent)
         }
+
+        val tvNome = findViewById<TextView>(R.id.tvNome)
+        val nome = intent.getStringExtra("NOME")
+        tvNome.text = "$nome"
     }
 }
