@@ -8,7 +8,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF">
 
         <TextView
             android:id="@+id/textView11"
@@ -21,5 +23,45 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="330dp"
+            android:layout_height="401dp"
+            android:layout_marginTop="50dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+            <CheckBox
+                android:id="@+id/checkBoxRefri"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/checkbox_selector_refrigerante"
+                android:button="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBoxCerveja"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/checkbox_selector_cerveja"
+                android:button="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBoxSuco"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/checkbox_selector_suco"
+                android:button="@null"
+                app:layout_constraintEnd_toStartOf="@+id/checkBoxCerveja"
+                app:layout_constraintStart_toEndOf="@+id/checkBoxRefri" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </FrameLayout>
