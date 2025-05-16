@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buttonFinalizar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TempFragment">
@@ -25,7 +26,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="330dp"
-            android:layout_height="401dp"
+            android:layout_height="501dp"
             android:layout_marginTop="50dp"
             android:background="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
@@ -69,6 +70,20 @@
                 app:layout_constraintEnd_toStartOf="@+id/checkBoxBBQ"
                 app:layout_constraintStart_toEndOf="@+id/checkBoxSal"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonRelatorio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#F91B1B"
+                android:text="Finalizar"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#F91B1B"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
