@@ -7,13 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 
 class TempFragment : Fragment() {
-
 
     val viewModel: AlimentosViewModel by activityViewModels()
 
@@ -26,8 +23,6 @@ class TempFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
 
         val checkboxes = listOf(
             Triple(R.id.checkBoxSal, "Sal", viewModel.selecionadosTemp),
@@ -45,16 +40,14 @@ class TempFragment : Fragment() {
             }
         }
 
-        val buttonRelatorio = view.findViewById<Button?>(R.id.buttonRelatorio)
-        buttonRelatorio?.setOnClickListener {
-            val intent = Intent(requireContext(), RelatorioActivity::class.java)
-            startActivity(intent)
-        }
-
+        val buttonRelatorio = view.findViewById<Button>(R.id.buttonRelatorio)
         buttonRelatorio.setOnClickListener {
-            val intent = Intent(requireContext(), RelatorioActivity::class.java)
+            val qtdeAdultos = (activity as? FgmtActivity)?.qtdeAdultos ?: 0
+            val qtdeKids = (activity as? FgmtActivity)?.qtdeKids ?: 0
 
-            // Se precisar passar dados para a RelatorioActivity
+            val intent = Intent(requireContext(), RelatorioActivity::class.java)
+            intent.putExtra("qtdeAdultos", qtdeAdultos)
+            intent.putExtra("qtdeKids", qtdeKids)
             intent.putExtra("carnes_selecionadas", viewModel.selecionadosCarnes.joinToString(", "))
             intent.putExtra("guarnições_selecionadas", viewModel.selecionadosGuarni.joinToString(", "))
             intent.putExtra("bebidas_selecionadas", viewModel.selecionadosBeb.joinToString(", "))
@@ -62,11 +55,5 @@ class TempFragment : Fragment() {
 
             startActivity(intent)
         }
-
-
-
-
-
     }
-
 }

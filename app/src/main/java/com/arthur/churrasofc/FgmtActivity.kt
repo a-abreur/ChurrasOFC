@@ -14,12 +14,20 @@ class FgmtActivity : AppCompatActivity() {
     private lateinit var navGuarni: ImageView
     private lateinit var navBeb: ImageView
     private lateinit var navTemp: ImageView
+    internal var qtdeAdultos: Int = 0
+    internal var qtdeKids: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         window.statusBarColor = ContextCompat.getColor(this, R.color.white)
 
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fgmt)
+
+        qtdeAdultos = intent.getIntExtra("qtdeAdultos", 0)
+        qtdeKids = intent.getIntExtra("qtdeKids", 0)
+
 
         // Inicializando os botões
         navCarnes = findViewById(R.id.btnCarnes)

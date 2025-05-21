@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -63,9 +64,17 @@ class QTD_Activity : AppCompatActivity() {
         }
 
         btnConfirmar.setOnClickListener {
-            val intent = Intent(this, FgmtActivity::class.java)
-            startActivity(intent)
+            if (qtdeAdultos == 0 && qtdeKids == 0) {
+                Toast.makeText(this, "Adicione pelo menos uma pessoa!", Toast.LENGTH_SHORT).show()
+            } else {
+                val intent = Intent(this, FgmtActivity::class.java)
+                intent.putExtra("qtdeAdultos", qtdeAdultos)
+                intent.putExtra("qtdeKids", qtdeKids)
+                startActivity(intent)
+            }
         }
+
+
 
 
     }
